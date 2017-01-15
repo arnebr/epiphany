@@ -57,7 +57,7 @@ if(!function_exists('getSession'))
     $employ = EpiSession::employ();
     if(sizeof($employ)==1){
       $class=$employ;
-    else{
+    }else{
     $class = array_shift($employ);}
 
     if($employ && class_exists($class))
