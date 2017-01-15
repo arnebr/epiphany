@@ -1,7 +1,7 @@
 {
-    "name": "raid-software/epiphany",
+    "name": "arnebr/epiphany",
     "type": "library",
-    "homepage": "https://github.com/raid-software/epiphany",
+    "homepage": "https://github.com/arnebr/epiphany",
     "require": {
         "php": ">=5.2.0"
     },
