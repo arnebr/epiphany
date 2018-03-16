@@ -24,6 +24,7 @@ class EpiRoute
   const httpGet = 'GET';
   const httpPost= 'POST';
   const httpPut = 'PUT';
+  const httpHead = 'HEAD';
   const httpDelete = 'DELETE';
 
   /**
