@@ -73,6 +73,17 @@ class EpiRoute
   {
     $this->addRoute($route, $callback, self::httpDelete, $isApi);
   }
+  /**
+     * head('/', 'function');
+     * @name  head
+     * @author  Arne Breitsprecher <arnebr@gmail.com>
+     * @param string $route
+     * @param mixed $callback
+     */
+    public function head($route, $callback, $isApi = false)
+    {
+        $this->addRoute($route, $callback, self::httpHead, $isApi);
+    }
 
   /**
    * NOT YET IMPLEMENTED
