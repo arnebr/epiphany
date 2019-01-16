@@ -26,6 +26,7 @@ class EpiRoute
   const httpPut = 'PUT';
   const httpHead = 'HEAD';
   const httpDelete = 'DELETE';
+   const httpOptions = 'OPTIONS';
 
   /**
    * get('/', 'function');
@@ -85,6 +86,18 @@ class EpiRoute
     {
         $this->addRoute($route, $callback, self::httpHead, $isApi);
     }
+   /**
+     * options('/', 'function');
+     * @name  head
+     * @author  Arne Breitsprecher <arnebr@gmail.com>
+     * @param string $route
+     * @param mixed $callback
+     */
+    public function options($route, $callback, $isApi = false)
+    {
+        $this->addRoute($route, $callback, self::httpOptions, $isApi);
+    }
+
 
   /**
    * NOT YET IMPLEMENTED
