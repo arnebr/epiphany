@@ -23,10 +23,11 @@ class EpiRoute
   const routeKey= '__route__';
   const httpGet = 'GET';
   const httpPost= 'POST';
+  const httpPatch= 'PATCH';
   const httpPut = 'PUT';
   const httpHead = 'HEAD';
   const httpDelete = 'DELETE';
-   const httpOptions = 'OPTIONS';
+  const httpOptions = 'OPTIONS';
 
   /**
    * get('/', 'function');
@@ -51,6 +52,18 @@ class EpiRoute
   {
     $this->addRoute($route, $callback, self::httpPost, $isApi);
   }
+  
+  /**
+   * post('/', 'function');
+   * @name  patch
+   * @author  Arne Breitsprecher <arnebr@gmail.com>
+   * @param string $route
+   * @param mixed $callback
+   */
+  public function patch($route, $callback, $isApi = false)
+  {
+    $this->addRoute($route, $callback, self::httpPatch, $isApi);
+  }
 
   /**
    * put('/', 'function');
@@ -67,7 +80,7 @@ class EpiRoute
   /**
    * delete('/', 'function');
    * @name  delete
-   * @author  Sandro Meier <sandro.meier@fidelisfactory.ch>
+   * @author  Arne Breitsprecher <arnebr@gmail.com>
    * @param string $route
    * @param mixed $callback
    */
