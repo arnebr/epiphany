@@ -26,6 +26,8 @@ class EpiRoute
   const httpPatch= 'PATCH';
   const httpPut = 'PUT';
   const httpHead = 'HEAD';
+  const httpLock = 'LOCK';
+  const httpUnlock = 'UNLOCK';
   const httpDelete = 'DELETE';
   const httpOptions = 'OPTIONS';
 
@@ -87,6 +89,28 @@ class EpiRoute
   public function delete($route, $callback, $isApi = false)
   {
     $this->addRoute($route, $callback, self::httpDelete, $isApi);
+  }
+  /**
+   * lock('/', 'function');
+   * @name  lock
+   * @author  Arne Breitsprecher <arnebr@gmail.com>
+   * @param string $route
+   * @param mixed $callback
+   */
+  public function lock($route, $callback, $isApi = false)
+  {
+    $this->addRoute($route, $callback, self::httpLock, $isApi);
+  }
+  /**
+   * unlock('/', 'function');
+   * @name  unlock
+   * @author  Arne Breitsprecher <arnebr@gmail.com>
+   * @param string $route
+   * @param mixed $callback
+   */
+  public function unlock($route, $callback, $isApi = false)
+  {
+    $this->addRoute($route, $callback, self::httpUnlock, $isApi);
   }
   /**
      * head('/', 'function');
@@ -185,7 +209,9 @@ class EpiRoute
           header('Content-Type: application/json');
 
         header('Content-Length:' . strlen($response));
-        echo $response;
+        if($httpMethod !== "HEAD") {
+          echo $response;
+        }
       }
     }
   }
