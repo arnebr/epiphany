@@ -41,6 +41,7 @@ class EpiRoute
   public function get($route, $callback, $isApi = false)
   {
     $this->addRoute($route, $callback, self::httpGet, $isApi);
+    $this->addRoute($route, $callback, self::httpHead, $isApi);
   }
 
   /**
