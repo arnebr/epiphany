@@ -1,6 +1,8 @@
 <?php
 class EpiSession_Php implements EpiSessionInterface
 {
+  /** Set by EpiSession::getInstance(). */
+  public $hash;
   public function end()
   {
     $_SESSION = array();
