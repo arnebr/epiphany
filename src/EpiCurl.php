@@ -115,7 +115,7 @@ class EpiCurl
 
   private function getKey($ch)
   {
-    return (string)$ch;
+    return is_object($ch) ? (string)spl_object_id($ch) : (string)$ch;
   }
 
   private function headerCallback($ch, $header)
