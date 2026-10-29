@@ -2,8 +2,9 @@
     "name": "arnebr/epiphany",
     "type": "library",
     "homepage": "https://github.com/arnebr/epiphany",
+    "license": "BSD-3-Clause",
     "require": {
-        "php": ">=5.2.0"
+        "php": ">=8.5.0"
     },
     "autoload": {
         "classmap": ["src"]

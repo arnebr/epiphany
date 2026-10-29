@@ -10,7 +10,7 @@ class EpiException extends Exception
     $useExceptions = Epi::getSetting('exceptions');
     if($useExceptions)
     {
-      throw new $exception($exception->getMessage(), $exception->getCode());
+      throw $exception;
     }
     else
     {

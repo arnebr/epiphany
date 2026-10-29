@@ -47,7 +47,7 @@ The documentation provides a few conventions that we believe lead to well writte
 
 ### What you need
 
-The Epiphany framework only requires PHP 5+, Apache and mod_rewrite. That's all!
+The Epiphany framework requires PHP 8.5+, Apache and mod_rewrite. That's all!
 
 ----------------------------------------
 
